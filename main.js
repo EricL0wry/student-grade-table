@@ -1,5 +1,5 @@
-var tableBody = document.getElementById("grades");
-var table = new GradeTable(tableBody);
-var app = new App(table);
+var table = document.getElementById("grade-table");
+var gradeTable = new GradeTable(table);
+var app = new App(gradeTable);
 
 app.start();
