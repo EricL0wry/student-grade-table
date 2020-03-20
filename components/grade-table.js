@@ -22,7 +22,7 @@ class GradeTable{
       newRow.appendChild(newCourse);
       newRow.appendChild(newGrade);
 
-      this.tableElement.appendChild(newRow);
+      tableBody.appendChild(newRow);
     }
   }
 
