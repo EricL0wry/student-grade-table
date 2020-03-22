@@ -11,7 +11,7 @@ class GradeTable{
     var tableBody = this.tableElement.querySelector("tbody");
     tableBody.innerHTML = "";
 
-    if(!grades){
+    if(grades.length === 0){
       this.noGradesElement.className = "";
     } else {
       this.noGradesElement.className = "d-none";
@@ -41,7 +41,7 @@ class GradeTable{
     newGrade.textContent = data.grade;
     newDeleteButton.textContent = "DELETE";
     newDeleteButton.className = "btn btn-outline-danger btn-sm"
-    newDeleteButton.addEventListener("click", function(data){
+    newDeleteButton.addEventListener("click", function(){
       deleteGrade(data.id);
     })
 
