@@ -1,8 +1,10 @@
 class GradeForm{
   constructor(formElement){
-    this.formElement = formElement.addEventListener("submit", this.handleSubmit);
+    this.formElement = formElement;
     this.createGrade = null;
     this.handleSubmit = this.handleSubmit.bind(this);
+
+    this.formElement.addEventListener("submit", this.handleSubmit);
   }
 
   onSubmit(createGrade){
@@ -10,8 +12,15 @@ class GradeForm{
   }
 
   handleSubmit(event){
-    event.preventDefautl();
-    console.log("GradeForm.handleSubmit fired")
+    event.preventDefault();
+    var target = event.target;
+    var formData = new FormData(target);
+    var nameInput = formData.get("name");
+    var courseInput = formData.get("course");
+    var gradeInput = formData.get("grade");
+
+    this.createGrade(nameInput, courseInput, gradeInput);
+    target.reset();
   }
 
 }
