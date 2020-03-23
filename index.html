@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Student Grade Table</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 </head>
 <body>
@@ -37,23 +37,35 @@
         <p id="no-grades" class="d-none">No Grades Recorded</p>
       </div>
       <div id="form-container" class="col-lg-5 col-xl-4">
-        <form id="grade-form" class="col-12">
-          <div class="row justify-content-lg-end">
-            <h4 class="col-lg-11 mb-4 text-center text-lg-left">Add Grade</h4>
+        <form id="grade-form" class="col justify-content-lg-end">
+          <div class="form-group">
+            <h4 class="text-center text-lg-left">Add Grade</h4>
           </div>
-          <div class="form-group row align-items-lg-end justify-content-lg-end">
-            <h3 class="fas fa-user col-2 col-md-1 col-lg-2 text-center"></h3>
-            <input type="text" id="studentNameInput" name="name" class="form-control col-10 col-md-11 col-lg-9" placeholder="Name">
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <i class="fas fa-user" for="studentNameInput"></i>
+              </div>
+            </div>
+            <input type="text" id="studentNameInput" name="name" class="form-control" placeholder="Name">
           </div>
-          <div class="form-group row align-items-lg-end justify-content-lg-end">
-            <h3 class="far fa-list-alt col-2 col-md-1 col-lg-2 text-center" placeholder="Course"></h3>
-            <input type="text" id="courseInput" name="course" class="form-control col-10 col-md-11 col-lg-9" placeholder="Course">
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <i class="far fa-list-alt"></i>
+              </div>
+            </div>
+            <input type="text" id="courseInput" name="course" class="form-control" placeholder="Course">
           </div>
-          <div class="form-group row align-items-lg-end justify-content-lg-end">
-            <h3 class="fas fa-graduation-cap col-2 col-md-1 col-lg-2 text-center" ></h3>
-            <input type="number" id="gradeInput" name="grade" class="form-control col-10 col-md-11 col-lg-9" placeholder="Grade">
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+            </div>
+            <input type="number" id="gradeInput" name="grade" class="form-control" placeholder="Grade">
           </div>
-          <div class="form-groupr row justify-content-center justify-content-lg-end">
+          <div class="form-group">
             <button type="submit" class="btn btn-primary">Add</button>
             <button type="reset" class="btn btn-outline-danger ml-2">Cancel</button>
           </div>
