@@ -24,7 +24,11 @@ class App{
     for(var gradeIndex = 0; gradeIndex < grades.length; gradeIndex++){
       gradeTotal += grades[gradeIndex].grade;
     }
-    averageGrade = gradeTotal / grades.length;
+    averageGrade = (gradeTotal / grades.length).toFixed(1);
+
+    if(averageGrade === "NaN"){
+      averageGrade = "0.0";
+    }
 
     this.gradeTable.updateGrades(grades);
     this.pageHeader.updateAverage(averageGrade);
