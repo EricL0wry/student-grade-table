@@ -39,7 +39,7 @@
       <div id="form-container" class="col-lg-5 col-xl-4">
         <form id="grade-form" class="col justify-content-lg-end">
           <div class="form-group">
-            <h4 class="text-center text-lg-left">Add Grade</h4>
+            <h4 id="formTitle" class="text-center text-lg-left">Add Grade</h4>
           </div>
           <div class="input-group form-group">
             <div class="input-group-prepend">
@@ -65,8 +65,10 @@
             </div>
             <input type="number" id="gradeInput" name="grade" class="form-control" placeholder="Grade">
           </div>
+          <input type="hidden" id="gradeId" name="id">
           <div class="form-group">
-            <button type="submit" class="btn btn-primary">Add</button>
+            <button id="submitButton" type="submit" class="btn btn-primary">Add</button>
+            <!-- <button id="updateButton" type="submit" class="btn btn-primary d-none">Update</button> -->
             <button type="reset" class="btn btn-outline-danger ml-2">Cancel</button>
           </div>
         </form>
